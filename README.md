@@ -1,16 +1,43 @@
-# push_notifications
+# Push Notifications (Flutter + Firebase)
 
-A new Flutter project.
+A professional Flutter project demonstrating **push notifications using Firebase Cloud Messaging (FCM)**.  
+This repository provides a clean and beginner-friendly setup for implementing real-time notifications in Flutter applications.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## 🚀 Features
 
-A few resources to get you started if this is your first Flutter project:
+- Firebase Cloud Messaging (FCM) integration
+- Request and handle notification permissions
+- Receive notifications in:
+  - Foreground
+  - Background
+  - Terminated state
+- Generate and manage FCM device tokens
+- Scalable structure suitable for production apps
+- Ready to integrate with chat apps, fitness apps, or admin alerts
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+---
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 🛠 Tech Stack
+
+- **Flutter**
+- **Firebase Core**
+- **Firebase Cloud Messaging**
+- **Flutter Local Notifications**
+
+---
+
+## 📱 Supported Platforms
+
+- Android
+- iOS *(configuration required)*
+
+---
+
+## 📦 Packages Used
+
+```yaml
+firebase_core
+firebase_messaging
+flutter_local_notifications
