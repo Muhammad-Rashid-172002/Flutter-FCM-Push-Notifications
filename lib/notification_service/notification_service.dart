@@ -1,15 +1,16 @@
-import 'package:flutter/material.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
 
-class NotificationService extends StatefulWidget {
-  const NotificationService({super.key});
+class NotificationService {
+  final FirebaseMessaging _firebaseMessaging = FirebaseMessaging.instance;
 
-  @override
-  State<NotificationService> createState() => _NotificationServiceState();
-}
+  Future<void> init() async {
+    await _firebaseMessaging.requestPermission(
+      alert: true,
+      badge: true,
+      sound: true,
+    );
 
-class _NotificationServiceState extends State<NotificationService> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold();
+    String? token = await _firebaseMessaging.getToken();
+    print("FCM Token: $token");
   }
 }
