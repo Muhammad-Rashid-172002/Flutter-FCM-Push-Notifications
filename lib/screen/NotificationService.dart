@@ -10,6 +10,13 @@ class Notificationservice extends StatefulWidget {
 class _NotificationserviceState extends State<Notificationservice> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Notification Service'),
+      ),
+      body: const Center(
+        child: Text('Notification Service is running'),
+      ),
+    );
   }
 }
