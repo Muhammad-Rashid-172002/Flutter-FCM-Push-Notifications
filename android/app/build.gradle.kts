@@ -10,7 +10,7 @@ plugins {
 
 android {
     namespace = "com.example.push_notifications"
-    compileSdk = flutter.compileSdkVersion
+    compileSdk = 36
     ndkVersion = flutter.ndkVersion
 
     compileOptions {
@@ -28,7 +28,7 @@ android {
         // You can update the following values to match your application needs.
         // For more information, see: https://flutter.dev/to/review-gradle-config.
         minSdk = flutter.minSdkVersion
-        targetSdk = flutter.targetSdkVersion
+        targetSdk = 34
         versionCode = flutter.versionCode
         versionName = flutter.versionName
     }
@@ -40,8 +40,19 @@ android {
             signingConfig = signingConfigs.getByName("debug")
         }
     }
+    compileOptions {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+    isCoreLibraryDesugaringEnabled = true
+}
+kotlinOptions {
+    jvmTarget = "17"
+}
 }
 
 flutter {
     source = "../.."
+}
+dependencies {
+   coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.1.5")
 }

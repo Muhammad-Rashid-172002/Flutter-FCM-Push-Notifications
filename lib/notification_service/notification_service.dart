@@ -1,16 +1,16 @@
 import 'package:firebase_messaging/firebase_messaging.dart';
 
 class NotificationService {
-  final FirebaseMessaging _firebaseMessaging = FirebaseMessaging.instance;
-
-  Future<void> init() async {
-    await _firebaseMessaging.requestPermission(
+  FirebaseMessaging messaging = FirebaseMessaging.instance;
+  void requestNotificationPermissions() async {
+    NotificationSettings settings = await messaging.requestPermission(
       alert: true,
+      announcement: true,
       badge: true,
+      carPlay: true,
+      criticalAlert: true,
+      provisional: true,
       sound: true,
     );
-
-    String? token = await _firebaseMessaging.getToken();
-    print("FCM Token: $token");
   }
 }
