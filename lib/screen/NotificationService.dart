@@ -14,6 +14,7 @@ class _NotificationserviceState extends State<Notificationservice> {
       appBar: AppBar(
         title: const Text('Notification Service'),
       ),
+      // Add your notification service UI here
       body: const Center(
         child: Text('Notification Service is running'),
       ),
