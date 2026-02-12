@@ -21,7 +21,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Notification Service')),
+      appBar: AppBar(title: const Text('Notification Practice')),
       // Add your notification service UI here
       body: const Center(child: Text('Notification Service is running')),
     );
