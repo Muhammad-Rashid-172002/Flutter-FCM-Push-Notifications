@@ -1,7 +1,5 @@
-import 'dart:math';
-
 import 'package:firebase_messaging/firebase_messaging.dart';
-// 
+
 class NotificationService {
   FirebaseMessaging messaging = FirebaseMessaging.instance;
   void requestNotificationPermissions() async {
@@ -24,4 +22,10 @@ class NotificationService {
       print('User denied permission');
     }
   }
+Future<String> getDeviceToken() async {
+  String?  token = await messaging.getToken();
+  print('Device Token: $token');
+  return token!;
+}
+
 }
